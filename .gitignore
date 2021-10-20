@@ -120,3 +120,6 @@ run/
 
 #minecraft
 server/*
+!server/eula.txt
+!server/start.bat
+!server/start.sh
