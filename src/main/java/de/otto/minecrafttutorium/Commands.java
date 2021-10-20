@@ -17,12 +17,12 @@ public class Commands implements CommandExecutor {
                 return true;
             } else if (args.length == 1) {
                 try {
-                    double phealth = ((Player) sender).getHealth();
-                    double addhealth = Double.parseDouble(args[0]);
-                    if (phealth < 20) {
-                        ((Player) sender).setHealth(phealth + addhealth);
+                    double playerHealth = ((Player) sender).getHealth();
+                    double healthToAdd = Double.parseDouble(args[0]);
+                    if (playerHealth < 20) {
+                        ((Player) sender).setHealth(playerHealth + healthToAdd);
                         ((Player) sender).sendMessage(ChatColor.GRAY + "You have been healed for " +
-                                ChatColor.GREEN + addhealth + " health");
+                                ChatColor.GREEN + healthToAdd + " health");
                         return true;
                     } else {
                         ((Player) sender).sendMessage(ChatColor.YELLOW + "If you take some damage...i could heal you!");
