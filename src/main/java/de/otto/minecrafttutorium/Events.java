@@ -16,7 +16,7 @@ public class Events implements Listener {
 
     @EventHandler
     public void onBlockBreak(BlockBreakEvent event) {
-        Block block = event.getBlock();;
+        Block block = event.getBlock();
         Material material = block.getType();
         Player player = event.getPlayer();
 
